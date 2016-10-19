@@ -1,6 +1,6 @@
 {
-  "name": "simpl-schema",
-  "version": "0.0.3",
+  "name": "barco-simpl-schema",
+  "version": "0.0.7",
   "description": "A schema validation package that supports direct validation of MongoDB update modifier objects.",
   "author": "Eric Dobbertin <aldeed@gmail.com>",
   "license": "MIT",
@@ -8,6 +8,7 @@
     "type": "git",
     "url": "https://github.com/aldeed/node-simple-schema.git"
   },
+  "publishConfig": { "registry": "https://bin.barco.com/artifactory/api/npm/npm-local"},
   "bugs": {
     "url": "https://github.com/aldeed/node-simple-schema/issues"
   },
@@ -22,13 +23,13 @@
     "build": "rm -rf dist/** && babel lib --out-dir dist --ignore *.tests.js,testHelpers/*",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix || true",
-    "prepublish": "npm test && npm run build",
+    "prepublish": "npm run build",
     "test": "mocha --compilers js:babel-core/register --recursive 'lib/**/*.tests.js'",
     "test:watch": "npm test -- --watch"
   },
   "dependencies": {
     "clone": "^1.0.2",
-    "message-box": "0.0.1",
+    "barco-message-box": "0.0.1",
     "mongo-object": "0.0.1",
     "underscore": "^1.8.3"
   },
